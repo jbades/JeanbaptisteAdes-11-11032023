@@ -1,0 +1,13 @@
+.header {
+    &__logo {
+        width: 100px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+}
