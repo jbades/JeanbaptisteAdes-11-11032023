@@ -1,3 +1,14 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
 
-
-/*# sourceMappingURL=style.css.map */
+.header__logo {
+  width: 100px;
+}
+.header__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
