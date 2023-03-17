@@ -1,3 +1,45 @@
-* {
+$super-extra-small: 360px;
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    &__boxed {
+        max-width: 1440px;
+        margin: auto;
+        background-color: #ffffff;
+        padding: 40px 100px;
+    }
+
+    &__root {
+        background-color: #f1eeee;
+    }
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
     font-family: 'Montserrat', sans-serif;
+    color: #FF6060;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: $small) {
+
+    * {
+        font-size: 12px;
+    }
+
 }

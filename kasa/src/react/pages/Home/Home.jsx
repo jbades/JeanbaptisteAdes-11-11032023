@@ -1,7 +1,9 @@
+import HeadSection from "./HeadSection/HeadSection";
+
 function Home() {
   return (
     <div>
-      Voici la page Home
+      <HeadSection />
     </div>
   );
 }

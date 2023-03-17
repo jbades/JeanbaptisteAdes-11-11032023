@@ -1,5 +1,5 @@
 import logo from "../../../assets/Kasa_LOGO_211x68.png"
-import Menu from "./Menu/index"
+import Menu from "./Menu/Menu"
  
 function Header() {
     return (

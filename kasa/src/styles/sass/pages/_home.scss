@@ -1,0 +1,19 @@
+.headsection {
+    &__text {
+        font-size: 48px;
+        color: #ffffff;
+    }
+
+    &__wrapper {
+        background-color: aquamarine;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 223px;
+        border-radius: 20px;
+        background-image: url("../../../assets/kasa_home_headsection.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 105px;
+    }
+}
