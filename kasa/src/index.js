@@ -7,9 +7,9 @@ import {
 } from 'react-router-dom'
 import About from './react/pages/About/About'
 import Home from './react/pages/Home/Home'
-import Header  from './react/components/Header/Header'
+import Header  from './react/layout/Header/Header'
 import Error  from './react/pages/Error/Error'
-import Footer from './react/components/Footer/Footer'
+import Footer from './react/layout/Footer/Footer'
  
 const domNode = document.getElementById('root')
 const root = createRoot(domNode)
