@@ -6,9 +6,7 @@ function Home() {
     return (
       <div>
         <HeadSection/>
-        {housing.map(house => (
-          <CardList key={house.id}/>
-        ))}
+        <CardList key={housing}/>
       </div>
     );  
   }

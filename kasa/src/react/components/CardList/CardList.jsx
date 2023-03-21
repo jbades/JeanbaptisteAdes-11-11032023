@@ -1,7 +1,13 @@
-function CardList() {
+import HousingCard from "../HousingCard/HousingCard"
+
+function CardList({housing}) {
 
     return (
-        <div>Logement</div>
+        <div className="cardlist">
+            {housing.map(house => (
+                <HousingCard key={house.title}/>
+            ))}
+        </div>
     )
 }
 
