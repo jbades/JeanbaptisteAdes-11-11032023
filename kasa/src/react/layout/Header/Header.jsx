@@ -3,7 +3,7 @@ import Menu from "./Nav/Nav"
  
 function Header() {
     return (
-        <div className="header__wrapper">
+        <div className="header__wrapper wrapper__boxed">
             <img src={logo} alt='logo kasa' className="header__logo" />
             <Menu />
         </div>

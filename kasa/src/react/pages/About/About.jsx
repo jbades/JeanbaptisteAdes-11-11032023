@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div>
+        <div className="wrapper__boxed">
             Différents dropdowns...
         </div>
     )

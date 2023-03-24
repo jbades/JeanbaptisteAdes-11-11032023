@@ -1,6 +1,4 @@
 .header {
-    &__logo {}
-
     &__wrapper {
         display: flex;
         flex-flow: row nowrap;
@@ -8,6 +6,6 @@
         align-items: center;
         gap: 20px;
         height: 68px;
-        margin-bottom: 104px;
+        padding-bottom: 104px;
     }
 }
