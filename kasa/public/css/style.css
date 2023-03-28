@@ -65,6 +65,62 @@ nav {
   border-radius: 20px;
 }
 
+.housing__wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.housing-element__block {
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+}
+.housing-element__block--side {
+  width: 300px;
+}
+.housing-element__content {
+  background-color: #F6F6F6;
+  padding: 15px;
+}
+.housing-element__header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  padding: 15px;
+}
+.housing-element__header div,
+.housing-element__header i {
+  color: #ffffff;
+  font-weight: 600;
+}
+.housing-element__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.housing-header__main-header {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.housing-header__main-header h1 {
+  font-size: 36px;
+}
+.housing-header__side-header {
+  display: flex;
+  flex: column wrap;
+}
+.housing-header__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .cardlist {
   background-color: #F6F6F6;
   border-radius: 10px;
