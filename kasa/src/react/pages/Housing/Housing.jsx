@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import housingList from "../../../datas/logements.json";
+import housingList from "../../../datas/logements.json"
 
 function Housing () {
     const [product, setProduct] = useState([])
@@ -13,8 +13,10 @@ function Housing () {
     }, [slug])
 
     return (
-        <div className="housing__wrapper wrapper__boxed">
-            <div>image appartement</div>
+        <div key={product.id} className="housing__wrapper wrapper__boxed">
+            {product.pictures.map((picture, index) => {
+                return <img key={`${index}`} src={picture}/>
+            })}
             <div className="housing-header__wrapper">
                 <div className="housing-header__main-header">
                     <h1>{product.title}</h1>
@@ -22,6 +24,11 @@ function Housing () {
                     <div>{product.tags}</div>
                 </div>
                 <div className="housing-header__side-header">
+                    <div className="housing-header__owner">
+                        {/* {Object.keys(product.host).forEach((hostData, index) => {
+                            console.log(`${hostData} - ${index}`)
+                        })} */}
+                    </div>
                     <div>{product.rating}</div>
                 </div>
             </div>
@@ -29,16 +36,20 @@ function Housing () {
                 <div className="housing-element__block">
                     <div className="housing-element__header">
                         <div>Description</div>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <i className="fa fa-chevron-down"></i>
                     </div>
                     <div className="housing-element__content">{product.description}</div>
                 </div>
                 <div className="housing-element__block housing-element__block--side">
                     <div className="housing-element__header">
                         <div>Équipements</div>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        <i className="fa fa-chevron-down"></i>
                     </div>
-                    <div className="housing-element__content">{product.equipments}</div>
+                    <div className="housing-element__content">{
+                        product.equipments.map((equipment, index) => {
+                            return <div key={`${index} - ${equipment}`}>{equipment}</div>
+                        })
+                    }</div>
                 </div>
             </div>
         </div>

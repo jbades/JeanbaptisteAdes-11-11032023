@@ -86,6 +86,7 @@ nav {
 .housing-element__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   background-color: #FF6060;
   border-radius: 10px;
@@ -95,6 +96,10 @@ nav {
 .housing-element__header i {
   color: #ffffff;
   font-weight: 600;
+}
+.housing-element__header div::before,
+.housing-element__header i::before {
+  color: #ffffff;
 }
 .housing-element__wrapper {
   display: flex;

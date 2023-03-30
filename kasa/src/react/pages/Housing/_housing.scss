@@ -26,6 +26,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         gap: 10px;
         background-color: #FF6060;
         border-radius: 10px;
@@ -35,6 +36,10 @@
         i {
             color: #ffffff;
             font-weight: 600;
+
+            &::before {
+                color: #ffffff;
+            }
         }
     }
 
