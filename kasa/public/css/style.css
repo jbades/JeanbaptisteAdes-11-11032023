@@ -47,6 +47,16 @@ nav {
   justify-content: flex-end;
   gap: 50px;
 }
+nav a {
+  text-decoration: none;
+}
+nav a:hover, nav a:active {
+  text-decoration: underline;
+}
+
+.cardlist a {
+  text-decoration: none;
+}
 
 .headsection__text {
   font-size: 48px;
@@ -75,13 +85,15 @@ nav {
   display: flex;
   flex-flow: column nowrap;
   border-radius: 10px;
+  width: 50%;
 }
 .housing-element__block--side {
-  width: 300px;
+  min-width: 300px;
 }
 .housing-element__content {
   background-color: #F6F6F6;
-  padding: 15px;
+  padding: 25px 15px;
+  border-radius: 10px;
 }
 .housing-element__header {
   display: flex;
@@ -100,12 +112,14 @@ nav {
 .housing-element__header div::before,
 .housing-element__header i::before {
   color: #ffffff;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
 }
 .housing-element__wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 80px;
 }
 
 .housing-header__main-header {
@@ -114,16 +128,40 @@ nav {
 }
 .housing-header__main-header h1 {
   font-size: 36px;
+  margin: 0;
+  font-weight: 600;
+}
+.housing-header__owner {
+  display: flex;
+  margin: 20px 0;
+}
+.housing-header__rating {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  gap: 5px;
 }
 .housing-header__side-header {
   display: flex;
-  flex: column wrap;
+  flex-flow: column wrap;
+}
+.housing-header__tag {
+  background-color: #FF6060;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 5px 30px;
+  font-size: 14px;
+}
+.housing-header__tags-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
 .housing-header__wrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  gap: 40px;
 }
 
 .cardlist {
@@ -149,7 +187,18 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  text-decoration: none;
+}
+
+.rated::before {
+  color: #FF6060;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+}
+
+.unrated::before {
+  color: #E3E3E3;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
 }
 
 .footer__img {

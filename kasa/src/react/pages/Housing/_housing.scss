@@ -12,15 +12,17 @@
         display: flex;
         flex-flow: column nowrap;
         border-radius: 10px;
+        width: 50%;
 
         &--side {
-            width: 300px;
+            min-width: 300px;
         }
     }
 
     &__content {
         background-color: #F6F6F6;
-        padding: 15px;
+        padding: 25px 15px;
+        border-radius: 10px;
     }
 
     &__header {
@@ -39,6 +41,8 @@
 
             &::before {
                 color: #ffffff;
+                font-weight: 900;
+                font-family: 'Font Awesome 6 Free';
             }
         }
     }
@@ -47,7 +51,7 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        gap: 40px;
+        gap: 80px;
     }
 }
 
@@ -58,18 +62,46 @@
 
         h1 {
             font-size: 36px;
+            margin: 0;
+            font-weight: 600;
         }
+    }
+
+    &__owner {
+        display: flex;
+        margin: 20px 0;
+    }
+
+    &__rating {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: end;
+        gap: 5px;
     }
 
     &__side-header {
         display: flex;
-        flex: column wrap;
+        flex-flow: column wrap;
+    }
+
+    &__tag {
+        background-color: #FF6060;
+        color: #ffffff;
+        border-radius: 10px;
+        padding: 5px 30px;
+        font-size: 14px;
+    }
+
+    &__tags-wrapper{
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
     }
 
     &__wrapper {
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
-        align-items: center;
+        gap: 40px;
     }
 }

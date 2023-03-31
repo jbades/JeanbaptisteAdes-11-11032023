@@ -3,4 +3,12 @@ nav {
     flex-flow: row nowrap;
     justify-content: flex-end;
     gap: 50px;
+
+    a {
+        text-decoration: none;
+
+        &:hover, &:active {
+            text-decoration: underline;
+        }
+    }
 }

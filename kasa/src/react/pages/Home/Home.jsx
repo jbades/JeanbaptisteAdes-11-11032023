@@ -10,6 +10,7 @@ function Home() {
           {housingList.map(house => (
             <HousingCard 
               cover={house.cover}
+              key= {"housing" + house.id}
               id={house.id}
               title={house.title}
             />
