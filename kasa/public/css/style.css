@@ -122,6 +122,17 @@ nav a:hover, nav a:active {
   gap: 80px;
 }
 
+.housing-header__host-info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.housing-header__host-info img {
+  border-radius: 70px;
+  height: 64px;
+}
 .housing-header__main-header {
   display: flex;
   flex-flow: column nowrap;
@@ -130,10 +141,6 @@ nav a:hover, nav a:active {
   font-size: 36px;
   margin: 0;
   font-weight: 600;
-}
-.housing-header__owner {
-  display: flex;
-  margin: 20px 0;
 }
 .housing-header__rating {
   display: flex;

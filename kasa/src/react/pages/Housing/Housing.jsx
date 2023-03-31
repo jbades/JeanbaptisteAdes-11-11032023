@@ -30,9 +30,9 @@ function Housing () {
                     </div>
                 </div>
                 <div className="housing-header__side-header">
-                    <div className="housing-header__owner">
+                    <div className="housing-header__host-info">
                         <div>{product.host && Object.values(product.host.name)}</div>
-                        <img src={product.host && Object.values(product.host.picture)} alt=""/>
+                        <img src={product.host && product.host.picture} alt=""/>
                     </div>
                     <StarRating rating={product.rating}/>
                 </div>
