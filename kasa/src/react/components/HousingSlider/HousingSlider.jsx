@@ -7,9 +7,9 @@ function HousingSlider({picturesList}) {
 
     return (
         <div className="housing-slider__wrapper"  style={{ backgroundImage: `url(${url})`}}>
-            <i className="fa-solid fa-chevron-left chevron-left" onClick={() => setShownPictureIndex(shownPictureIndex - 1)}></i>
+            <i className="fa-solid fa-chevron-left chevron-left" onClick={() => shownPictureIndex - 1 < 0 ? setShownPictureIndex(picturesList.length - 1) : setShownPictureIndex(shownPictureIndex - 1)}></i>
             <div className="housing-slider__content">{shownPictureIndex + 1} / {picturesList.length}</div>
-            <i className="fa-solid fa-chevron-right  chevron-right" onClick={() => setShownPictureIndex(shownPictureIndex + 1)}></i>
+            <i className="fa-solid fa-chevron-right  chevron-right" onClick={() => shownPictureIndex + 1 > picturesList.length - 1 ?  setShownPictureIndex(0) : setShownPictureIndex(shownPictureIndex + 1)}></i>
         </div>
     )
 }
