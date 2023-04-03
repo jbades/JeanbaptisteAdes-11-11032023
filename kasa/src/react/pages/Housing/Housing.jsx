@@ -5,28 +5,24 @@ import StarRating from "../../components/StarRating/starrating"
 import HousingSlider from "../../components/HousingSlider/HousingSlider"
 
 function Housing () {
-    const [product, setProduct] = useState([])
+    const [selectedHousing, setSelectedHousing] = useState([])
     const {slug} = useParams()
 
     const filteredHousing = housingList.filter(housing => housing.id === slug)
 
     useEffect(() => {
-        setProduct(filteredHousing[0])
+        setSelectedHousing(filteredHousing[0])
     }, [filteredHousing])
 
     return (
-        <div key={product.id} className="housing__wrapper wrapper__boxed">
-            {console.log("type product:", typeof product, "type-product.pictures:", typeof product.pictures)}
-            <HousingSlider picturesList={product.pictures ? product.pictures : []}/>
-            {/* {product.pictures && product.pictures.map((picture, index) => {
-                return <img key={"picture" + index} src={picture} alt=""/>
-            })} */}
+        <div key={selectedHousing.id} className="housing__wrapper wrapper__boxed">
+            <HousingSlider picturesList={selectedHousing.pictures ? selectedHousing.pictures : []}/>
             <div className="housing-header__wrapper">
                 <div className="housing-header__main-header">
-                    <h1>{product.title}</h1>
-                    <span>{product.location}</span>
+                    <h1>{selectedHousing.title}</h1>
+                    <span>{selectedHousing.location}</span>
                     <div className="housing-header__tags-wrapper">
-                        {product.tags && product.tags.map((tag, index) => {
+                        {selectedHousing.tags && selectedHousing.tags.map((tag, index) => {
                             return <div key={"tag" + index} className="housing-header__tag">{tag}</div>
                         })
                         }
@@ -34,10 +30,10 @@ function Housing () {
                 </div>
                 <div className="housing-header__side-header">
                     <div className="housing-header__host-info">
-                        <div>{product.host && product.host.name}</div>
-                        <img src={product.host && product.host.picture} alt=""/>
+                        <div>{selectedHousing.host && selectedHousing.host.name}</div>
+                        <img src={selectedHousing.host && selectedHousing.host.picture} alt=""/>
                     </div>
-                    <StarRating rating={product.rating}/>
+                    <StarRating rating={selectedHousing.rating}/>
                 </div>
             </div>
             <div className="housing-element__wrapper">
@@ -46,7 +42,7 @@ function Housing () {
                         <div>Description</div>
                         <i className="fa-solid fa-chevron-down"></i>
                     </div>
-                    <div className="housing-element__content">{product.description}</div>
+                    <div className="housing-element__content">{selectedHousing.description}</div>
                 </div>
                 <div className="housing-element__block housing-element__block--side">
                     <div className="housing-element__header">
@@ -54,7 +50,7 @@ function Housing () {
                         <i className="fa-solid fa-chevron-down"></i>
                     </div>
                     <div className="housing-element__content">{
-                        product.equipments && product.equipments.map((equipment, index) => {
+                        selectedHousing.equipments && selectedHousing.equipments.map((equipment, index) => {
                             return <div key={"equipment" + index}>{equipment}</div>
                         })
                     }</div>

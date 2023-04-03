@@ -28,6 +28,7 @@
             &.chevron-left, &.chevron-right {
                 grid-row: 2 / 3;
                 margin: auto;
+                cursor: pointer;
             }
 
             &.chevron-left {

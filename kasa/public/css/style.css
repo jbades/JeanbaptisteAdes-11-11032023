@@ -38,7 +38,6 @@ html {
   align-items: center;
   gap: 20px;
   height: 68px;
-  padding-bottom: 104px;
 }
 
 nav {
@@ -237,6 +236,7 @@ nav a:hover, nav a:active {
 .housing-slider__wrapper i.chevron-left, .housing-slider__wrapper i.chevron-right {
   grid-row: 2/3;
   margin: auto;
+  cursor: pointer;
 }
 .housing-slider__wrapper i.chevron-left {
   grid-column: 1/2;
