@@ -1,0 +1,42 @@
+.housing-slider {
+    &__content {
+        color: #ffffff;
+        grid-row: 3 / 4;
+        grid-column: 6 / 7;
+        position: relative;
+        top: 100px;
+        margin: 0 auto 0 auto;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-rows: repeat(3, 3fr);
+        grid-template-columns: repeat(11, 11fr);
+        background-position: center;
+        background-size: cover;
+        height: 415px;
+        border-radius: 20px;
+
+        i {
+            &::before {
+                color: #ffffff;
+                font-weight: 900;
+                font-family: 'Font Awesome 6 Free';
+                font-size: 50px;
+            }
+
+            &.chevron-left, &.chevron-right {
+                grid-row: 2 / 3;
+                margin: auto;
+            }
+
+            &.chevron-left {
+                grid-column: 1 / 2;
+            }
+
+            &.chevron-right {
+                grid-column: 11 / 12;
+            }
+        }
+    }
+}

@@ -129,6 +129,9 @@ nav a:hover, nav a:active {
   gap: 10px;
   margin-bottom: 20px;
 }
+.housing-header__host-info div {
+  text-align: right;
+}
 .housing-header__host-info img {
   border-radius: 70px;
   height: 64px;
@@ -206,6 +209,40 @@ nav a:hover, nav a:active {
   color: #E3E3E3;
   font-weight: 900;
   font-family: "Font Awesome 6 Free";
+}
+
+.housing-slider__content {
+  color: #ffffff;
+  grid-row: 3/4;
+  grid-column: 6/7;
+  position: relative;
+  top: 100px;
+  margin: 0 auto 0 auto;
+}
+.housing-slider__wrapper {
+  display: grid;
+  grid-template-rows: repeat(3, 3fr);
+  grid-template-columns: repeat(11, 11fr);
+  background-position: center;
+  background-size: cover;
+  height: 415px;
+  border-radius: 20px;
+}
+.housing-slider__wrapper i::before {
+  color: #ffffff;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  font-size: 50px;
+}
+.housing-slider__wrapper i.chevron-left, .housing-slider__wrapper i.chevron-right {
+  grid-row: 2/3;
+  margin: auto;
+}
+.housing-slider__wrapper i.chevron-left {
+  grid-column: 1/2;
+}
+.housing-slider__wrapper i.chevron-right {
+  grid-column: 11/12;
 }
 
 .footer__img {
