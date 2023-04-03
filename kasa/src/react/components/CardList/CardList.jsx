@@ -1,4 +1,5 @@
 import HousingCard from "../HousingCard/HousingCard"
+import PropTypes from 'prop-types'
 
 function CardList({housing}) {
 
@@ -9,6 +10,10 @@ function CardList({housing}) {
             ))}
         </div>
     )
+}
+
+CardList.propTypes = {
+    housing: PropTypes.object
 }
 
 export default CardList
