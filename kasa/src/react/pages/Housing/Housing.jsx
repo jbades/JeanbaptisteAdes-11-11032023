@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import housingList from "../../../datas/logements.json"
 import StarRating from "../../components/StarRating/starrating"
 import HousingSlider from "../../components/HousingSlider/HousingSlider"
+import AccordionTextBlock from "../../components/AccordionTextBlock/AccordionTextBlock"
 
 function Housing () {
     const [selectedHousing, setSelectedHousing] = useState([])
@@ -33,28 +34,12 @@ function Housing () {
                         <div>{selectedHousing.host && selectedHousing.host.name}</div>
                         <img src={selectedHousing.host && selectedHousing.host.picture} alt=""/>
                     </div>
-                    <StarRating rating={selectedHousing.rating}/>
+                    <StarRating rating={selectedHousing.rating ? selectedHousing.rating : ""}/>
                 </div>
             </div>
             <div className="housing-element__wrapper">
-                <div className="housing-element__block">
-                    <div className="housing-element__header">
-                        <div>Description</div>
-                        <i className="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div className="housing-element__content">{selectedHousing.description}</div>
-                </div>
-                <div className="housing-element__block housing-element__block--side">
-                    <div className="housing-element__header">
-                        <div>Équipements</div>
-                        <i className="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div className="housing-element__content">{
-                        selectedHousing.equipments && selectedHousing.equipments.map((equipment, index) => {
-                            return <div key={"equipment" + index}>{equipment}</div>
-                        })
-                    }</div>
-                </div>
+                <AccordionTextBlock blockTitle="Description" blockContent={selectedHousing.description ? selectedHousing.description : ""}/>
+                <AccordionTextBlock blockTitle="Équipements" blockContent={selectedHousing.equipments ? selectedHousing.equipments : []}/>
             </div>
         </div>
     )
