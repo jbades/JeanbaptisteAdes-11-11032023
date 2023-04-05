@@ -1,3 +1,10 @@
+$super-extra-small: 360px;
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
 .footer {
     &__img {
         max-height: 40px;
@@ -15,7 +22,16 @@
         flex-flow: column nowrap;
         align-items: center;
         min-height: 150px;
-        justify-content: center;
-        gap: 20px;
+        justify-content: space-evenly;
     }
+}
+
+@media only screen and (max-width: $small) {
+
+    .footer {
+        &__text {
+            font-size: 15px;
+        }
+    }
+        
 }

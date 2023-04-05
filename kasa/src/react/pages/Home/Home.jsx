@@ -4,7 +4,7 @@ import HousingCard from "../../components/HousingCard/HousingCard";
 
 function Home() {
     return (
-      <div className="wrapper__boxed">
+      <div className="body__wrapper wrapper__boxed">
         <HeadSection/>
         <div className="cardlist">
           {housingList.map(house => (

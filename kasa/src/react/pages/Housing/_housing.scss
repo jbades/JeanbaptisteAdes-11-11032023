@@ -1,3 +1,10 @@
+$super-extra-small: 360px;
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
 .housing {
     &__wrapper {
         display: flex;
@@ -67,4 +74,26 @@
         justify-content: space-between;
         gap: 40px;
     }
+}
+
+@media only screen and (max-width: $small) {
+
+    .housing-header {
+        &__host-info {
+            margin-bottom: inherit;
+        }
+
+        &__side-header {
+            flex-flow: row-reverse wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__wrapper {
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+    }
+    
 }

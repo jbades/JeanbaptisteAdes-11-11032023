@@ -1,11 +1,23 @@
-.cardlist a {
-    text-decoration: none;
+$super-extra-small: 360px;
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
+.body {
+    &__wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        gap : 50px;
+    }
 }
 
 .headsection {
     &__text {
         font-size: 48px;
         color: #ffffff;
+        padding: 50px;
     }
 
     &__wrapper {
@@ -17,7 +29,33 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        margin-bottom: 105px;
         border-radius: 20px;
     }
+}
+
+@media only screen and (max-width: $large) {
+
+    .body {
+        &__wrapper {
+            gap : inherit;
+        }
+    }
+
+    .headsection {
+        &__wrapper  {
+            height: inherit;
+        }
+    }
+
+}
+
+@media only screen and (max-width: $medium) {
+
+    .headsection {
+        &__text {
+            font-size: 25px;
+            padding: 30px 15px;
+        }
+    }
+
 }

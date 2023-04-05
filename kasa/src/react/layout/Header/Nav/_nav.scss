@@ -1,3 +1,10 @@
+$super-extra-small: 360px;
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
 nav {
     display: flex;
     flex-flow: row nowrap;
@@ -11,4 +18,12 @@ nav {
             text-decoration: underline;
         }
     }
+}
+
+@media only screen and (max-width: $small) {
+
+    nav {
+        gap: 15px;
+    }
+    
 }

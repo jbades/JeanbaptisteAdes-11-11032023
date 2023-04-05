@@ -1,3 +1,10 @@
+$super-extra-small: 360px;
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
 .header {
     &__wrapper {
         display: flex;
@@ -6,5 +13,20 @@
         align-items: center;
         gap: 20px;
         height: 68px;
+        margin-top: 25px;
     }
+}
+
+@media only screen and (max-width: $medium) {
+
+    .header {
+        &__logo {
+            height: 40px;
+        }
+
+        &__wrapper {
+            margin-top: inherit;
+        }
+    }
+
 }
