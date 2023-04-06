@@ -1,3 +1,10 @@
+$super-extra-small: 360px;
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;
+
 .housing-element {
 
     &__block {
@@ -45,4 +52,19 @@
         justify-content: space-between;
         gap: 80px;
     }
+}
+
+@media only screen and (max-width: $medium) {
+
+    .housing-element {
+        &__block {
+            width: initial;
+        }
+
+        &__wrapper {
+            flex-flow: column nowrap;
+            gap: 20px;
+        }
+    }
+    
 }

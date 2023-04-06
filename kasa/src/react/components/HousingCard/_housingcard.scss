@@ -5,20 +5,6 @@ $medium: 768px;
 $large: 992px;
 $extra-large: 1200px;
 
-.cardlist {
-    background-color: #F6F6F6;
-    border-radius: 10px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    gap: 60px;
-    padding: 50px;
-
-    a {
-        text-decoration: none;
-    }
-}
-
 .housingcard {
     &__title {
         padding: 10px;
@@ -49,10 +35,9 @@ $extra-large: 1200px;
 
 @media only screen and (max-width: $small) {
 
-    .cardlist {
-        background-color: #ffffff;
-        gap: 20px;
-        padding: 20px;
+    .housingcard {
+        &__wrapper {
+            width: inherit;
         }
-    
+    }
 }

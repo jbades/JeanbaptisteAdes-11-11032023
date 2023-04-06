@@ -30,3 +30,12 @@ $extra-large: 1200px;
     }
 
 }
+
+@media only screen and (max-width: $small) {
+
+    .header {
+        &__logo {
+            height: 25px;
+        }
+    }
+}

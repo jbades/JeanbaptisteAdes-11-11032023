@@ -11,7 +11,7 @@ $extra-large: 1200px;
         grid-row: 3 / 4;
         grid-column: 6 / 7;
         position: relative;
-        top: 100px;
+        top: 50%;
         margin: 0 auto 0 auto;
     }
 
@@ -23,6 +23,7 @@ $extra-large: 1200px;
         background-size: cover;
         height: 415px;
         border-radius: 20px;
+        position: relative;
 
         i {
             &::before {
@@ -54,6 +55,12 @@ $extra-large: 1200px;
     .housing-slider {
         &__wrapper {
             height: 255px;
+
+            i {
+                &::before {
+                    font-size: 25px;
+                }
+            }
         }
     }
 }
