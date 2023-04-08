@@ -17,13 +17,17 @@ const root = createRoot(domNode)
 root.render(
     <React.StrictMode>
         <Router>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/housing/:slug" element={<Housing />} />
-                <Route path="/about/*" element={<About />} />
-                <Route path="*" element={<Error />} />
-            </Routes>
+            <div className='boxed-body'>
+                <Header />
+                <main className='body__wrapper wrapper__boxed'>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/housing/:slug" element={<Housing />} />
+                        <Route path="/about/*" element={<About />} />
+                        <Route path="*" element={<Error />} />
+                    </Routes>
+                </main>
+            </div>
             <Footer/>
         </Router>
     </React.StrictMode>

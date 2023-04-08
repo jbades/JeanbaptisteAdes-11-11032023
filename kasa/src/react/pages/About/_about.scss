@@ -1,0 +1,12 @@
+.values {
+    &__wrapper {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        margin-bottom: 40px;
+
+        >.accordion__block {
+            width: inherit;
+        }
+    }
+}

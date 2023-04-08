@@ -16,7 +16,7 @@ function Housing () {
     }, [filteredHousing])
 
     return (
-        <div key={selectedHousing.id} className="housing__wrapper wrapper__boxed">
+        <div key={selectedHousing.id} className="housing__wrapper">
             <HousingSlider picturesList={selectedHousing.pictures ? selectedHousing.pictures : []}/>
             <div className="housing-header__wrapper">
                 <div className="housing-header__main-header">
@@ -37,7 +37,7 @@ function Housing () {
                     <StarRating rating={selectedHousing.rating ? selectedHousing.rating : ""}/>
                 </div>
             </div>
-            <div className="housing-element__wrapper">
+            <div className="housing-content__wrapper">
                 <AccordionTextBlock blockTitle="Description" blockContent={selectedHousing.description ? selectedHousing.description : ""}/>
                 <AccordionTextBlock blockTitle="Équipements" blockContent={selectedHousing.equipments ? selectedHousing.equipments : []}/>
             </div>

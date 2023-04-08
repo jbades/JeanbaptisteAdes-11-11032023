@@ -6,12 +6,12 @@ function AccordionTextBlock({ blockTitle, blockContent }) {
         switch (Array.isArray(blockContent)) {
         case true:
             return (
-            <div className="housing-element__block">
-                <div className="housing-element__header">
+            <div className="accordion__block">
+                <div className="accordion__header">
                     <div>{blockTitle}</div>
                     <i className="fa-solid fa-chevron-down" onClick={() => setIsToggled(false)}></i>
                 </div>
-                <div className="housing-element__content">
+                <div className="accordion__content">
                     {blockContent.map((object, index) => (
                         <div key={"object" + index}>{object}</div>
                     ))}
@@ -20,12 +20,12 @@ function AccordionTextBlock({ blockTitle, blockContent }) {
             )
         case false:
             return (
-            <div className="housing-element__block">
-                <div className="housing-element__header">
+            <div className="accordion__block">
+                <div className="accordion__header">
                     <div>{blockTitle}</div>
                     <i className="fa-solid fa-chevron-down" onClick={() => setIsToggled(false)}></i>
                 </div>
-                <div className="housing-element__content">{blockContent}</div>
+                <div className="accordion__content">{blockContent}</div>
             </div>
             )
         default:
@@ -37,17 +37,15 @@ function AccordionTextBlock({ blockTitle, blockContent }) {
         switch (Array.isArray(blockContent)) {
         case true:
             return (
-                <div className="housing-element__header">
+                <div className="accordion__header">
                     <div>{blockTitle}</div>
-                    <div className="housing-element__block">
                     <i className="fa-solid fa-chevron-up" onClick={() => setIsToggled(true)}></i>
-                </div>
             </div>
             )
         case false:
             return (
-            <div className="housing-element__block">
-                <div className="housing-element__header">
+            <div className="accordion__block">
+                <div className="accordion__header">
                     <div>{blockTitle}</div>
                     <i className="fa-solid fa-chevron-up" onClick={() => setIsToggled(true)}></i>
                 </div>

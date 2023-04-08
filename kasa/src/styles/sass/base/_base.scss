@@ -15,8 +15,23 @@ $extra-large: 1200px;
     font-weight: 400;
 }
 
+.boxed-body {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 50px;
+    background-color: #ffffff;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 100px;
+    min-height: 85vh;
+}
+
 body {
     margin: 0;
+}
+
+header {
+    width: 100%;
 }
 
 html {
@@ -24,29 +39,28 @@ html {
 }
 
 #root {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 50px;
-    background-color: #ffffff;
+    background-color: #f1eeee;
+}
+
+.body {
+    &__wrapper {
+        margin: auto !important;
+    }
 }
 
 .wrapper {
     &__boxed {
         max-width: 1440px;
         background-color: #ffffff;
-        padding-right: 100px;
-        padding-left: 100px;
-    }
-
-    &__root {
-        background-color: #f1eeee;
+        margin: 0 auto 0;
     }
 }
 
 @media only screen and (max-width: $medium) {
 
-    #root {
-        gap: initial;
+    .boxed-body {
+        gap: inherit;
+        padding: inherit;
     }
 
     .wrapper {

@@ -5,13 +5,12 @@ $medium: 768px;
 $large: 992px;
 $extra-large: 1200px;
 
-.housing-element {
+.accordion {
 
     &__block {
-        display: flex;
-        flex-flow: column nowrap;
+        display: grid;
+        grid-auto-rows: 40px auto;
         border-radius: 10px;
-        width: 50%;
 
         &--side {
             min-width: 300px;
@@ -45,25 +44,13 @@ $extra-large: 1200px;
             }
         }
     }
-
-    &__wrapper {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        gap: 80px;
-    }
 }
 
 @media only screen and (max-width: $medium) {
 
-    .housing-element {
+    .accordion {
         &__block {
             width: initial;
-        }
-
-        &__wrapper {
-            flex-flow: column nowrap;
-            gap: 20px;
         }
     }
     

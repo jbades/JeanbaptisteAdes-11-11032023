@@ -6,6 +6,8 @@ $large: 992px;
 $extra-large: 1200px;
 
 .footer {
+    margin-top: auto;
+
     &__img {
         max-height: 40px;
     }
@@ -21,8 +23,8 @@ $extra-large: 1200px;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        min-height: 150px;
         justify-content: space-evenly;
+        min-height: 8em;
     }
 }
 
