@@ -10,6 +10,7 @@ $extra-large: 1200px;
         display: flex;
         flex-flow: column nowrap;
         gap : 50px;
+        min-width: 100%;
     }
 }
 
