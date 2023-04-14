@@ -5,7 +5,8 @@
 
     &__message {
         display: flex;
-        flex-flow: column nowrap;        
+        flex-flow: column nowrap; 
+        margin: auto;       
     }
 
     &__title {

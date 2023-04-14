@@ -8,7 +8,7 @@ function About() {
     return (
         <div className="body__wrapper wrapper__boxed">
             <HeadSection picturePath={HeadPicture}/>
-            <div className="values__wrapper wrapper__boxed">
+            <div className="values__wrapper">
                 <AccordionTextBlock blockTitle="Fiabilité" blockContent={aboutContent[0].accountability ? aboutContent[0].accountability:""} />
                 <AccordionTextBlock blockTitle="Respect" blockContent={aboutContent[0].respect ? aboutContent[0].respect:""} />
                 <AccordionTextBlock blockTitle="Service" blockContent={aboutContent[0].service ? aboutContent[0].service:""} />
